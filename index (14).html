@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ucapan terimakasih</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at top left,#2563eb 0%,transparent 25%),
+        radial-gradient(circle at bottom right,#0ea5e9 0%,transparent 20%),
+        #020617;
+    color:white;
+    position:relative;
+}
+
+/* Circuit lines */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    border:2px solid rgba(59,130,246,.12);
+}
+
+body::before{
+    top:30px;
+    left:20px;
+    border-right:none;
+    border-bottom:none;
+}
+
+body::after{
+    bottom:30px;
+    right:20px;
+    border-left:none;
+    border-top:none;
+}
+
+.card{
+    width:min(92%, 760px);
+    padding:28px;
+    border-radius:24px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 35px rgba(59,130,246,.18);
+    animation:glow 4s infinite ease-in-out;
+    z-index:2;
+}
+
+@keyframes glow{
+    50%{
+        box-shadow:0 0 50px rgba(59,130,246,.25);
+    }
+}
+
+h1{
+    font-size:clamp(24px,5vw,34px);
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#60a5fa;
+    font-family:Consolas, monospace;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.line{
+    width:90px;
+    height:4px;
+    background:#3b82f6;
+    border-radius:999px;
+    margin-bottom:18px;
+}
+
+.badges{
+    display:flex;
+    gap:8px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(59,130,246,.14);
+    color:#93c5fd;
+    font-size:12px;
+}
+
+p{
+    font-size:clamp(13px,3vw,16px);
+    line-height:1.7;
+    color:#d1d5db;
+    margin-bottom:12px;
+}
+
+.footer{
+    margin-top:18px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.music-btn{
+    margin-top:16px;
+    padding:10px 18px;
+    border:none;
+    border-radius:999px;
+    background:rgba(59,130,246,.15);
+    color:#93c5fd;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.05);
+    background:rgba(59,130,246,.25);
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Terima Kasih, Pak Habil</h1>
+    <div class="subtitle">appreciation.exe</div>
+
+    <div class="badges">
+        <div class="badge">TKJ</div>
+        <div class="badge">SISKOM</div>
+        <div class="badge">PEMDAS</div>
+    </div>
+
+    <div class="line"></div>
+
+    <p>
+    Terima kasih atas ilmu, bimbingan, dan waktu yang telah
+    Bapak berikan selama mengajarkan Siskom dan Pemdas di kelas 10.
+</p>
+
+<p>
+    Selama belajar bersama Bapak, kami tidak hanya memahami
+    materi tentang sistem komputer dan dasar pemrograman,
+    tetapi juga belajar bagaimana berpikir secara logis,
+    teliti, dan terstruktur dalam menyelesaikan suatu masalah.
+</p>
+
+<p>
+    Banyak hal yang awalnya terasa rumit perlahan menjadi
+    lebih mudah dipahami berkat cara Bapak menjelaskan materi,
+    memberikan arahan, serta membimbing kami dengan sabar
+    di setiap proses pembelajaran.
+</p>
+
+<p>
+    Dari Bapak, kami juga belajar bahwa dunia teknologi
+    bukan hanya soal perangkat, jaringan, atau baris kode,
+    tetapi juga tentang pola pikir, konsistensi, dan kemauan
+    untuk terus belajar serta berkembang.
+</p>
+
+<p>
+    Ilmu dan pengalaman yang Bapak bagikan akan menjadi
+    bekal yang berharga bagi kami untuk melangkah lebih jauh
+    di dunia TKJ maupun teknologi ke depannya.
+</p>
+
+<p>
+    Terima kasih atas dedikasi, kesabaran, dan semua hal
+    yang telah Bapak ajarkan. Semoga segala kebaikan Bapak
+    dibalas dengan kesehatan, kemudahan, dan keberkahan.
+</p>
+
+    <div class="footer">— ikyy</div>
+
+    <button onclick="document.getElementById('bgm').play()" class="music-btn">
+        ▶ Play Music
+    </button>
+
+    <audio id="bgm" loop>
+        <source src="pak habil.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+</body>
+</html>
